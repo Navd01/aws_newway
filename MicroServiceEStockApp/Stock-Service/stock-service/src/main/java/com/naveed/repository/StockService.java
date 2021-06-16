@@ -19,8 +19,7 @@ import com.naveed.beans.Stock;
 public class StockService  {
 	
 	private final AmazonDynamoDB client = AmazonDynamoDBClientBuilder.standard()
-			.withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration("dynamodb.ap-south-1.amazonaws.com", "ap-south-1"))
-			.withCredentials(new AWSStaticCredentialsProvider(new BasicAWSCredentials("AKIAXUNTDGZKARQXGPP5", "qT+mJelPnPifTCxWPl3+9OcwnxUXujmr1tXikvUR")))
+			.withRegion(Regions.AP_SOUTH_1)
 			.build();  
     
 	private DynamoDBMapper mapper = new DynamoDBMapper(client);
