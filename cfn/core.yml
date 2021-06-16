@@ -309,7 +309,16 @@ Resources:
                 - 'dynamodb:Query'
                 - 'dynamodb:UpdateItem'
                 - 'dynamodb:GetItem'
-              Resource: 'arn:aws:dynamodb:*:*:table/MysfitsTable*'
+              Resource: 'arn:aws:dynamodb:*:*:table/CompanyTable*'
+            - Effect: Allow
+              Action:
+                # Allows the ECS tasks to interact with only the MysfitsTable
+                # in DynamoDB
+                - 'dynamodb:Scan'
+                - 'dynamodb:Query'
+                - 'dynamodb:UpdateItem'
+                - 'dynamodb:GetItem'
+              Resource: 'arn:aws:dynamodb:*:*:table/StockTable*'  
 
   # An IAM role that allows the AWS CodePipeline service to perform it's
   # necessary actions. We have intentionally left permissions on this role
