@@ -1,0 +1,128 @@
+{
+    "CompanyTable": [{
+            "PutRequest": {
+                "Item": {
+                    "id": {
+                        "N": "1"
+                    },
+                    "companyCode": {
+                        "S": "xx01"
+                    },
+                    "companyName": {
+                        "S": "TCS"
+                    },
+                    "companyCEO": {
+                        "S": "Naveed"
+                    },
+                    "companyTurnover": {
+                        "N": "10000000000"
+                    },
+                    "companyWebsite": {
+                        "S": "http://www.tcs.com"
+                    },
+                    "stockExchange": {
+                        "S": "Exchanged"
+                    },
+                    "latestStockPrice": {
+                        "N": "33.02"
+                    }
+                    
+                }
+            }
+        },
+		{
+            "PutRequest": {
+                "Item": {
+                    "id": {
+                        "N": "2"
+                    },
+                    "companyCode": {
+                        "S": "xx02"
+                    },
+                    "companyName": {
+                        "S": "TCS"
+                    },
+                    "companyCEO": {
+                        "S": "Naveed"
+                    },
+                    "companyTurnover": {
+                        "N": "100000000000"
+                    },
+                    "companyWebsite": {
+                        "S": "http://www.tcs.com"
+                    },
+                    "stockExchange": {
+                        "S": "Exchanged"
+                    },
+                    "latestStockPrice": {
+                        "N": "77.98"
+                    }
+                    
+                }
+            }
+        },
+		{
+            "PutRequest": {
+                "Item": {
+                    "id": {
+                        "N": "3"
+                    },
+                    "companyCode": {
+                        "S": "xx03"
+                    },
+                    "companyName": {
+                        "S": "TCS"
+                    },
+                    "companyCEO": {
+                        "S": "Naveed"
+                    },
+                    "companyTurnover": {
+                        "N": "100000000000"
+                    },
+                    "companyWebsite": {
+                        "S": "http://www.tcs.com"
+                    },
+                    "stockExchange": {
+                        "S": "Exchanged"
+                    },
+                    "latestStockPrice": {
+                        "S": "655.33"
+                    }
+                    
+                }
+            }
+        },
+		{
+            "PutRequest": {
+                "Item": {
+                    "id": {
+                        "N": "4"
+                    },
+                    "companyCode": {
+                        "S": "xx04"
+                    },
+                    "companyName": {
+                        "S": "TCS"
+                    },
+                    "companyCEO": {
+                        "S": "Naveed"
+                    },
+                    "companyTurnover": {
+                        "N": "100000000000"
+                    },
+                    "companyWebsite": {
+                        "S": "http://www.tcs.com"
+                    },
+                    "stockExchange": {
+                        "S": "Exchanged"
+                    },
+                    "latestStockPrice": {
+                        "S": "766.22"
+                    }
+                    
+                }
+            }
+        }
+   
+    ]
+}

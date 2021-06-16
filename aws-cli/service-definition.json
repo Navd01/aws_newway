@@ -1,0 +1,30 @@
+{
+  "serviceName": "Company-Service",
+  "cluster": "CompanyService-Cluster",
+  "launchType": "FARGATE",
+  "deploymentConfiguration": {
+    "maximumPercent": 200,
+    "minimumHealthyPercent": 0
+  },
+  "desiredCount": 1,
+  "networkConfiguration": {
+    "awsvpcConfiguration": {
+      "assignPublicIp": "DISABLED",
+      "securityGroups": [
+        "sg-012b2bc35e01288d1"
+      ],
+      "subnets": [
+        "subnet-081b18935446ec258",
+        "subnet-0ea68a9fb1fc32b95"
+      ]
+    }
+  },
+  "taskDefinition": "companyservice",
+  "loadBalancers": [
+    {
+      "containerName": "Company-Service",
+      "containerPort": 8080,
+      "targetGroupArn": "arn:aws:elasticloadbalancing:ap-south-1:524898481748:targetgroup/CompanyService01-TargetGroup/07d8bb3846917921"
+    }
+  ]
+}

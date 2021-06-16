@@ -1,0 +1,71 @@
+{
+  "TableName": "CompanyTable",
+  "ProvisionedThroughput": {
+    "ReadCapacityUnits": 3,
+    "WriteCapacityUnits": 3
+  },
+  
+  "AttributeDefinitions": [
+    {
+      "AttributeName": "id",
+      "AttributeType": "N"
+    },
+    {
+      "AttributeName": "companyCode",
+      "AttributeType": "S"
+    },
+	{
+      "AttributeName": "companyCEO",
+      "AttributeType": "S"
+    }
+
+  ],
+  "KeySchema": [
+    {
+      "AttributeName": "id",
+      "KeyType": "HASH"
+    }
+  ],
+  "GlobalSecondaryIndexes": [
+    {
+      "IndexName": "companyCodeIndex",
+      "KeySchema": [
+        {
+          "AttributeName": "companyCode",
+          "KeyType": "HASH"
+        },
+        {
+          "AttributeName": "id",
+          "KeyType": "RANGE"
+        }
+      ],
+      "Projection": {
+        "ProjectionType": "ALL"
+      },
+      "ProvisionedThroughput": {
+        "ReadCapacityUnits": 3,
+        "WriteCapacityUnits": 3
+      }
+    },
+    {
+      "IndexName": "companyCEOIndex",
+      "KeySchema": [
+        {
+          "AttributeName": "companyCEO",
+          "KeyType": "HASH"
+        },
+        {
+          "AttributeName": "id",
+          "KeyType": "RANGE"
+        }
+      ],
+      "Projection": {
+        "ProjectionType": "ALL"
+      },
+      "ProvisionedThroughput": {
+        "ReadCapacityUnits": 3,
+        "WriteCapacityUnits": 3
+      }
+    }
+  ]
+}

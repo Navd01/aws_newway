@@ -1,0 +1,32 @@
+{
+  "family": "companyservice",
+  "cpu": "256",
+  "memory": "512",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "executionRoleArn": "arn:aws:iam::524898481748:role/CompanyServiceCoreStack-EcsServiceRole-MV4WBP94MW1C",
+  "taskRoleArn": "arn:aws:iam::524898481748:role/CompanyServiceCoreStack-ECSTaskRole-1QY7T6LO75VKH",
+  "containerDefinitions": [
+    {
+      "name": "Company-Service",
+      "image": "524898481748.dkr.ecr.ap-south-1.amazonaws.com/company-service/service:latest",
+      "portMappings": [
+        {
+          "containerPort": 8080,
+          "protocol": "http"
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "company-service-logs",
+          "awslogs-region": "ap-south-1",
+          "awslogs-stream-prefix": "awslogs-company-service"
+        }
+      },
+      "essential": true
+    }
+  ]
+}
